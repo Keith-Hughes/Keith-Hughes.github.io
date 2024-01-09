@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2%; /* Use percentage for margin */
+  }
+  
+  header, section, footer {
+    margin-bottom: 2%; /* Use percentage for margin */
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  form {
+    max-width: 80%; /* Use percentage for maximum width */
+    margin: 0 auto; /* Center the form */
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 2% 4%; /* Use percentage for padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
