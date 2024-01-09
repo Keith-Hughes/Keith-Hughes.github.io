@@ -8,7 +8,9 @@
 </head>
 <body>
     
-
+    <div id="welcome-container">
+        <h1>Welcome to Keith Hughes's CV</h1>
+      </div>
     <header>
         <h1>Keith Hughes</h1>
         <p>Software Engineer</p>
@@ -113,5 +115,13 @@
                 console.error("Error adding document: ", e);
             }
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+  // Hide the welcome container after the animation duration
+                setTimeout(function () {
+                document.getElementById('welcome-container').style.display = 'none';
+                }, 2000); // Animation duration: 2 seconds
+        });
+
     </script>
   
