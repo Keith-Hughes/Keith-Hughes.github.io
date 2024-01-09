@@ -1,10 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 2%; /* Use percentage for margin */
+    margin: 2%;
   }
   
   header, section, footer {
-    margin-bottom: 2%; /* Use percentage for margin */
+    margin-bottom: 2%;
   }
   
   h1, h2, h3 {
@@ -12,20 +12,35 @@ body {
   }
   
   form {
-    max-width: 80%; /* Use percentage for maximum width */
-    margin: 0 auto; /* Center the form */
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
   }
   
   button {
     background-color: #4CAF50;
     color: white;
-    padding: 2% 4%; /* Use percentage for padding */
+    padding: 8px 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: #094b0c;
   }
   
