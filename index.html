@@ -8,120 +8,78 @@
 </head>
 <body>
     
-    <div id="welcome-container">
-        <h1>Welcome to Keith Hughes's CV</h1>
-      </div>
-    <header>
-        <h1>Keith Hughes</h1>
-        <p>Software Engineer</p>
-    </header>
+    <div class="loading-screen">
+        <video autoplay muted id="loading-video">
+            <source src="loading.webm" type="video/webm">
+        </video>
+    </div class="main-content">
+        <header>
+            <h1>Keith Hughes</h1>
+            <p>Software Engineer</p>
+        </header>
 
-    <section>
-        <h2>Contact Information</h2>
-        <address>
-            <p>Email: your.email@example.com</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Website: www.yourwebsite.com</p>
-            <p>LinkedIn: linkedin.com/in/yourname</p>
-        </address>
-    </section>
+        <section>
+            <h2>Contact Information</h2>
+            <address>
+                <p>Email: your.email@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Website: www.yourwebsite.com</p>
+                <p>LinkedIn: linkedin.com/in/yourname</p>
+            </address>
+        </section>
 
-    <section>
-        <h2>Education</h2>
-        <h3>University Name</h3>
-        <p>Degree Earned, Graduation Year</p>
-    </section>
+        <section>
+            <h2>Education</h2>
+            <h3>University Name</h3>
+            <p>Degree Earned, Graduation Year</p>
+        </section>
 
-    <section>
-        <h2>Experience</h2>
-        <h3>Job Title</h3>
-        <p>Company Name - Location | Start Date - End Date</p>
-        <ul>
-            <li>Responsibility/Accomplishment 1</li>
-            <li>Responsibility/Accomplishment 2</li>
-            <!-- Add more as needed -->
-        </ul>
-    </section>
+        <section>
+            <h2>Experience</h2>
+            <h3>Job Title</h3>
+            <p>Company Name - Location | Start Date - End Date</p>
+            <ul>
+                <li>Responsibility/Accomplishment 1</li>
+                <li>Responsibility/Accomplishment 2</li>
+               
+            </ul>
+        </section>
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Web Development</li>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Responsive Design</li>
-            <!-- Add more as needed -->
-        </ul>
-    </section>
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>Web Development</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Responsive Design</li>
+             
+            </ul>
+        </section>
 
-    <section>
-        <h2>Get in touch</h2>
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+        <section>
+            <h2>Get in touch</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
 
-    <footer>
-        <p>References available upon request</p>
-    </footer>
+        <footer>
+            <p>References available upon request</p>
+        </footer>
+    </div>
 
 </body>
 </html>
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-  
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyA1vCdvxRBKg4qiEvEiuaRBZXlRo80BlAU",
-      authDomain: "keithhughescv.firebaseapp.com",
-      projectId: "keithhughescv",
-      storageBucket: "keithhughescv.appspot.com",
-      messagingSenderId: "33187779200",
-      appId: "1:33187779200:web:996c27ce3e10615f648c65"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-  
-    // Initialize Cloud Firestore and get a reference to the service
-    const db = getFirestore(app);
-  
-           // Form submission event listener
-           document.getElementById("contactForm").addEventListener("submit", async function (event) {
-            event.preventDefault();
-
-            const formData = {
-                name: document.getElementById("name").value,
-                email: document.getElementById("email").value,
-                phone: document.getElementById("phone").value,
-            };
-
-            try {
-                const docRef = await addDoc(collection(db, "contacts"), formData);
-                console.log("Document written with ID: ", docRef.id);
-
-                //reset the form after successful submission
-                event.target.reset();
-            } catch (e) {
-                console.error("Error adding document: ", e);
-            }
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-  // Hide the welcome container after the animation duration
-                setTimeout(function () {
-                document.getElementById('welcome-container').style.display = 'none';
-                }, 2000); // Animation duration: 2 seconds
-        });
+<script type="module" src="app.js">
+    
 
     </script>
   
