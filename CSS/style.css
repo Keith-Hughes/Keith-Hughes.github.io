@@ -1,10 +1,45 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 2%;
+    background-color: rgb(0, 13, 19);
+  }
+
+html {
+    scroll-behavior: smooth;
   }
 
 
+.my-title, .contacts, .education, .skills, .contact-form, .experience {
+  background-color:rgb(0, 14, 38);
+  box-sizing: none;
+  color: #ffffff;
+}
+
+h1, h2{
+    font-family: "Audiowide", sans-serif;
+    color: #7ad5ff;
+    text-align: center;
+  }
+
+h3{
+  font-family: "Audiowide", sans-serif;
+  color: #7ad5ff;
+}
+
+.main-content, .loading-screen {
+    transition: opacity 1s ease-in-out;
+  }
+
+/* Set initial opacity to 0 for fade-in effect */
+.main-content {
+    opacity: 0;
+  }
+
+.loading-screen[style*="opacity: 0"] {
+    display: none;
+}  
+
 .loading-screen {
+    opacity: 1;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,10 +49,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 9999;
-
-    
-    
 }
 
 #loading-video {
@@ -27,19 +58,15 @@ body {
     
 }
 
-.main-content {
-    display: none; /* Initially hide main content */
-
-    
-}
+/* .main-content {
+    display: none; 
+} */
   
   header, section, footer {
     margin-bottom: 2%;
   }
   
-  h1, h2, h3 {
-    color: #333;
-  }
+
   
   form {
     max-width: 80%;
@@ -49,7 +76,7 @@ body {
   label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: #ffffff;
   }
   
   input[type="text"],
@@ -62,15 +89,16 @@ body {
   }
   
   button {
-    background-color: #4CAF50;
+    background-color: #00afbb;
     color: white;
     padding: 8px 16px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-  }
+    cursor: pointer; 
+    width: 100%; 
+    margin: auto;}
   
   button:hover {
-    background-color: #094b0c;
+    background-color: #003b48;
   }
   

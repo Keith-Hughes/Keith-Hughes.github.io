@@ -1,24 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keith Hughes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="Images/site.webmanifest">
 </head>
 <body>
-    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("Xq85xZ7tP-UhqL50I");
+    })();
+    </script>
+
     <div class="loading-screen">
         <video autoplay muted id="loading-video">
             <source src="loading.webm" type="video/webm">
         </video>
-    </div class="main-content">
-        <header>
+    </div >
+    <div class="main-content">
+        <header class="my-title">
             <h1>Keith Hughes</h1>
             <p>Software Engineer</p>
         </header>
 
-        <section>
+        <section class="contacts">
             <h2>Contact Information</h2>
             <address>
                 <p>Email: your.email@example.com</p>
@@ -28,13 +42,13 @@
             </address>
         </section>
 
-        <section>
+        <section class="education">
             <h2>Education</h2>
             <h3>University Name</h3>
             <p>Degree Earned, Graduation Year</p>
         </section>
 
-        <section>
+        <section class="experience">
             <h2>Experience</h2>
             <h3>Job Title</h3>
             <p>Company Name - Location | Start Date - End Date</p>
@@ -45,7 +59,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="skills">
             <h2>Skills</h2>
             <ul>
                 <li>Web Development</li>
@@ -55,7 +69,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="contact-form">
             <h2>Get in touch</h2>
             <form id="contactForm">
                 <label for="name">Name:</label>
@@ -67,6 +81,9 @@
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required>
 
+                <label for="message">Your Message:</label>
+                <input type="text" id="message" name="message" required>
+                
                 <button type="submit">Submit</button>
             </form>
         </section>

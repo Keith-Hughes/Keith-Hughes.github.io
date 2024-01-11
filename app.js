@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-  
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
     // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyA1vCdvxRBKg4qiEvEiuaRBZXlRo80BlAU",
@@ -26,14 +25,19 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
                 name: document.getElementById("name").value,
                 email: document.getElementById("email").value,
                 phone: document.getElementById("phone").value,
+                message: document.getElementById("message").value,
             };
-
+            emailjs.sendForm("service_4e2pfbh", "template_zstrssg", "#contactForm", "Xq85xZ7tP-UhqL50I")
+                .then(function(response) {
+                    console.log('SUCCESS! Email Sent', response.status, response.text);
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
             try {
                 const docRef = await addDoc(collection(db, "contacts"), formData);
                 console.log("Document written with ID: ", docRef.id);
-
-                //reset the form after successful submission
                 event.target.reset();
+
             } catch (e) {
                 console.error("Error adding document: ", e);
             }
@@ -44,11 +48,17 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
             const loadingScreen = document.querySelector('.loading-screen');
             const mainContent = document.querySelector('.main-content');
             const loadingVideo = document.getElementById('loading-video');
-        
             loadingVideo.addEventListener('ended', function () {                
-                    loadingScreen.style.display = 'none';
-                    mainContent.style.display = 'block';
+                loadingScreen.style.opacity = 0;
                 
+                // Listen for the 'transitionend' event to hide the loading screen after the fade-out transition
+                loadingScreen.addEventListener('transitionend', function () {
+                    loadingScreen.style.display = 'none';
+                });
+
+                // Set opacity to 1 for fade-in effect
+                mainContent.style.opacity = 1;
             });
+                
         });
 
