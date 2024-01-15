@@ -16,7 +16,7 @@ import { getFirestore, collection, addDoc } from "https://www.gstatic.com/fireba
   
     // Initialize Cloud Firestore and get a reference to the service
     const db = getFirestore(app);
-  
+
            // Form submission event listener
            document.getElementById("contactForm").addEventListener("submit", async function (event) {
             event.preventDefault();
@@ -33,6 +33,12 @@ import { getFirestore, collection, addDoc } from "https://www.gstatic.com/fireba
                 }, function(error) {
                     console.log('FAILED...', error);
                 });
+            emailjs.sendForm("service_4e2pfbh", "template_ed04fsd", "#contactForm", "Xq85xZ7tP-UhqL50I")
+                .then(function(response) {
+                    console.log('SUCCESS! Email Sent', response.status, response.text);
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });    
             try {
                 const docRef = await addDoc(collection(db, "contacts"), formData);
                 console.log("Document written with ID: ", docRef.id);
@@ -43,22 +49,4 @@ import { getFirestore, collection, addDoc } from "https://www.gstatic.com/fireba
             }
         });
 
-        document.addEventListener("DOMContentLoaded", function () {
-            // Hide the loading screen and show the main content after the video duration
-            const loadingScreen = document.querySelector('.loading-screen');
-            const mainContent = document.querySelector('.main-content');
-            const loadingVideo = document.getElementById('loading-video');
-            loadingVideo.addEventListener('ended', function () {                
-                loadingScreen.style.opacity = 0;
-                
-                // Listen for the 'transitionend' event to hide the loading screen after the fade-out transition
-                loadingScreen.addEventListener('transitionend', function () {
-                    loadingScreen.style.display = 'none';
-                });
-
-                // Set opacity to 1 for fade-in effect
-                mainContent.style.opacity = 1;
-            });
-                
-        });
-
+        

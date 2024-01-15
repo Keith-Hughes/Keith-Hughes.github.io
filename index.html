@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keith Hughes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
@@ -12,44 +13,65 @@
     <link rel="manifest" href="Images/site.webmanifest">
 </head>
 <body>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-    (function(){
-        emailjs.init("Xq85xZ7tP-UhqL50I");
-    })();
-    </script>
+    <script src="https://kit.fontawesome.com/7c845e7167.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="module" src="firebase.js"></script>
+    <script src="main.js"></script>
+
 
     <div class="loading-screen">
         <video autoplay muted id="loading-video">
             <source src="loading1.webm" type="video/webm">
         </video>
     </div >
+
     <div class="main-content">
+
         <header class="my-title">
-            <h1>Keith Hughes</h1>
-            <p>Software Engineer</p>
+        <div class="title-photo" style="align-items: last baseline;">
+                <img src="Images/potrait.png" alt="self potrait" class="my-potrait">
+            <h1 class="name">Keith Hughes<p class="position">Software Engineer</p><div class="social-icons" align="left">
+                <a href="https://www.linkedin.com/in/keith-hughes7/" target="_blank"><i class="fab fa-linkedin" style="color:#bbb2cf"></i></a>
+                <a href="https://github.com/Keith-Hughes" target="_blank"><i class="fab fa-github" style="color:#bbb2cf"></i></a>
+                <a href="#contactForm" target="_self"><i class="fa-solid fa-envelope" style="color:#bbb2cf"></i></a>
+            </div></h1>
+        </div>
+            <div class="menu-toggle"><h3 style="font-size: 3em;">&#9776;</h3></div>
+                <ul class="menu">
+                    <li><h3><a href="#">Home</a></h3></li>
+                    <li><h3><a href="#about-me" target="_blank">About Me</a></h3></li>
+                    <li><h3><a href="#">Skills</a></h3></li>
+                    <li><h3><a href="#">Projects</a></h3></li>
+                </ul>
         </header>
 
-        <section class="contacts">
-            <h2>Contact Information</h2>
-            <address>
-                <p>Email: your.email@example.com</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Website: www.yourwebsite.com</p>
-                <p>LinkedIn: linkedin.com/in/yourname</p>
-            </address>
+        <div class="border" id="about-me"></div>
+        
+    
+        
+        <section class="intro">
+            <h2 class="heading-one">&lt;h2&gt;🚀 Welcome to my Coding Journey! 🎨&lt;/h2&gt</h2>
+            <div class="tabs">
+                <div class="tab-button" >$Terminal.
+                    <div class="window-symbols" >
+                        <i class="fa-solid fa-window-minimize"></i>
+                        <i class="fa-solid fa-window-maximize"></i>
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                </div>
+                
+            </div>
+            <p class="intro-text2" style="color:rgb(35, 234, 8);" >keith@lh:~/Documents/About Me/$ <p class="intro-text" onclick="typeWriter()"><button>Click here to know me</button></p></p>
         </section>
 
         <section class="education">
-            <h2>Education</h2>
+            <h2 class="heading-two">Education</h2>
             <h3>University Name</h3>
             <p>Degree Earned, Graduation Year</p>
         </section>
 
         <section class="experience">
-            <h2>Experience</h2>
+            <h2 class="heading-three">Experience</h2>
             <h3>Job Title</h3>
             <p>Company Name - Location | Start Date - End Date</p>
             <ul>
@@ -60,7 +82,7 @@
         </section>
 
         <section class="skills">
-            <h2>Skills</h2>
+            <h2 class="heading-four">Skills</h2>
             <ul>
                 <li>Web Development</li>
                 <li>HTML, CSS, JavaScript</li>
@@ -70,7 +92,7 @@
         </section>
 
         <section class="contact-form">
-            <h2>Get in touch</h2>
+            <h2 class="heading-five">Get in touch</h2>
             <form id="contactForm">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -91,12 +113,10 @@
         <footer>
             <p>References available upon request</p>
         </footer>
+
     </div>
 
 </body>
 </html>
-<script type="module" src="app.js">
-    
 
-    </script>
   
