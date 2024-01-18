@@ -11,13 +11,37 @@
     <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
     <link rel="manifest" href="Images/site.webmanifest">
+    <link rel="stylesheet" href="CSS/chatbot.css">
 </head>
 <body>
     <script src="https://kit.fontawesome.com/7c845e7167.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="module" src="firebase.js"></script>
     <script src="main.js"></script>
+    <script src="chatbot.js" defer></script>
 
+
+
+    <button class="chatbot-toggler">
+      <span class="material-symbols-rounded">Chat</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h2>Ai Keith</h2>
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">KH</span>
+          <p>Hi there 👋<br>Im AI Keith, ask me anything?</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
 
     <div class="loading-screen">
         <video autoplay muted id="loading-video">
@@ -61,13 +85,19 @@
                 </div>
                 
             </div>
-            <p class="intro-text2" style="color:rgb(35, 234, 8);" >keith@lh:~/Documents/About Me/$ <p class="intro-text" onclick="typeWriter()"><button>Click here to know me</button></p></p>
+            <p class="intro-text2" style="color:rgb(35, 234, 8);" >keith@lh:~/Documents/About Me/$ <p class="intro-text" onclick="typeWriter()"><button class="terminal-enable">Me in a nutshell</button></p></p>
         </section>
 
-        <section class="education">
-            <h2 class="heading-two">Education</h2>
-            <h3>University Name</h3>
-            <p>Degree Earned, Graduation Year</p>
+        <section class="skills">
+            <h2 class="heading-two">&lt;h2&gt; Skills &lt;/h2&gt;</h2>
+            <ul style="list-style-type: square;">
+                <li>Skill one</li>
+                <li>Skill one</li>
+                <li>Skill one</li>
+                <li>Skill one</li>
+                <li>Skill one</li>
+                
+            </ul>
         </section>
 
         <section class="experience">

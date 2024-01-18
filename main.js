@@ -27,22 +27,20 @@ function openTab(tabId) {
     }
 }
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
     // Hide the loading screen and show the main content after the video duration
     const loadingScreen = document.querySelector('.loading-screen');
     const mainContent = document.querySelector('.main-content');
     const loadingVideo = document.getElementById('loading-video');
-    const headingOne = document.getElementsByClassName("heading-one").item(0)
     var headerHeight = document.querySelector('.my-title').offsetHeight;
     const menuToggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
   
     menuToggle.addEventListener('click', function() {
         var headerHeight = document.querySelector('.my-title').offsetHeight;
-        document.querySelector('.menu').style.top = headerHeight + 'px';
+        menu.style.top = headerHeight + 'px';
       menu.classList.toggle('show');
+      
     });
     // Set padding for the content based on the header height
     document.querySelector('.border').style.paddingTop = headerHeight+3 + 'px';

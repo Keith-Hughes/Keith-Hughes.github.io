@@ -24,22 +24,25 @@ html {
     padding: 0;
     display: flex;
     align-items: center; /* Add this line to vertically align the items */
-    
-
-
   }
 
   .menu li {
     margin-right: 25px;
     vertical-align: middle;
     text-align: left;
-    
   }
 
   .menu li:hover{
-    background-color:#131b23 ;
+    background-color:#131b23;
   }
 
+  .heading-one, .heading-two{
+    padding-bottom: 1%;
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+  }
   
   .menu a {
     text-decoration: none;
@@ -51,18 +54,20 @@ html {
   @media only screen and (max-width: 768px) {
     .menu {
       display: none;
+      background-color: #131b23;
       flex-direction: column;
       position: absolute;
       left: 0;
+      top: 35px;
       width: 100%;
-      background-color: #131b23;
+
     }
     
     .name{
       font-size: 25px;
     }
-    .heading-one{
-      font-size: larger;
+    .heading-one, .heading-two{
+      font-size: 5vw;
     }
 
     .menu.show {
@@ -76,10 +81,10 @@ html {
     .menu ul{
       margin: 0;
     }
+
     .menu-toggle {
       display: block;
-      align-items: center; /* Add this line to vertically align the items */
-
+      align-items: center; 
 
     }
   }
@@ -99,7 +104,7 @@ html {
   padding-bottom: -10px ;
   top: 0;
   justify-content: space-between;
-  border-bottom: 4px solid #bbb2cf;
+  border-bottom: 5px solid #bbb2cf;
   animation: slideBorder 3s infinite;
   animation-timing-function: ease-in-out;
 }
@@ -107,10 +112,11 @@ html {
   display: block; 
 }
 
+
+
 @keyframes slideBorder {
   0%, 100% {
-    border-bottom-width: 0; /* Start and end with no width */
-    
+    border-bottom-color:rgb(62, 83, 200)    
   }
 
   25%{
@@ -120,7 +126,6 @@ html {
     border-bottom-color:rgb(2, 98, 136);
   }
   50% {
-      border-bottom-width: 5px; /* Middle state with full width */
       border-bottom-color:rgb(0, 29, 194);
   }
 }
@@ -146,8 +151,11 @@ html {
 .contacts h2{
   color: #bbb2cf;
 }
-.my-title, .contacts, .education, .skills, .contact-form, .experience {
-  color: #015fa7;
+
+
+.my-title, .contacts, .skills, .skills, .contact-form, .experience {
+  color: #bbb2cf;
+  font-family: 'Courier New', Courier, monospace;
   margin: 0;
 
 }
@@ -211,10 +219,7 @@ h3{
     object-fit: fill;
     
 }
-.heading-one{
-  padding-bottom: 1%;
-  text-align: center;
-}
+
 
 /* .main-content {
     display: none; 
@@ -249,6 +254,18 @@ h3{
     box-sizing: border-box;
   }
   
+  .terminal-enable{
+    background-color: #273747;
+    width: 100%;
+    text-align: center;
+    color: #bbb2cf;
+  }
+
+  .terminal-enable:hover{
+    background-color: #131b23;
+    color: #bbb2cf;
+  }
+
   .contact-form button {
     background-color: #015fa7;
     color: rgb(219, 219, 219);
