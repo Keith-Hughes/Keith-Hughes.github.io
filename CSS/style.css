@@ -339,20 +339,20 @@ i {
   justify-content: center;
   }
 
-.intro-text2{
+.intro-text2, .skils-text2{
   
   padding-top: 0.5%;
   
 }
 
-.intro-text{
+.intro-text, .skils-text{
   padding-bottom: 1%;
   border-bottom-right-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
   border-bottom: 1px solid #383838;
 }
 
-.intro-text, .intro-text2{
+.intro-text, .intro-text2, .skils-text2, .skils-text{
   
   width: 75%;
   border-left: 1px solid #383838;
@@ -363,6 +363,23 @@ i {
   color: antiquewhite;
   font-family: 'Lucida Console', monospace;
   justify-content: center;
+  text-align: left;
+}
+
+@keyframes glowing {
+  0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); }
+  50% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.9); }
+  100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); }
+}
+
+/* Apply the animation to the h2 element */
+.heading-two{
+  display: inline-block;
+  border-radius: 25px;
+  animation: glowing 2s infinite; /* Change the duration or other properties as needed */
+}
+.skills{
+  text-align: center;
 }
 
   

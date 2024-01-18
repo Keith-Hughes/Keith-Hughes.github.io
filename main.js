@@ -1,31 +1,23 @@
 var i = 0;
-var txt = 'I completed high school in 2012 and began my career in sales. However, my true passion lies in IT, and I eventually transitioned into the field, gaining practical experience through various positions. Wanting to deepen my knowledge, I pursued further education in IT at WeThinkCode. With a diverse background in sales, finance, and IT, I possess valuable skills for different industries. My unwavering passion for IT and commitment to growth drive me to continually expand my expertise. I am excited about the future opportunities that my combined background can offer, and I am determined to pursue my interests and passions in the field of IT.'
-var speed = 50; /* The speed/duration of the effect in milliseconds */
+var j = 0;
+var txt = "In the world of sales, I began my career,\nBut my passion for IT was always near.\n\nTransitioning to tech, I found my delight,\nGaining expertise and knowledge, shining bright.\n\nAs a mentor, I guide the tech-savvy youth,\nEmpowering them to learn, grow, and sleuth.\n\nWith empathy and patience, I lend an ear,\nFostering a positive tech atmosphere, crystal clear.\n\nAs a freelance web developer, I broke free,\nCreating websites for all to see.\n\nCoding and configuring with skill and grace,\nBuilding online spaces, a valuable embrace.\n\nMy journey in IT is diverse and grand,\nFrom consultancy to accounts, I take my stand.\n\nWith Java and Python, I weave my code,\nSolving problems with skills that I hold.\n\nInnov8 Makerthon sparked a brilliant creation,\nA device to detect cable disruption, a sensation.\n\nEarning recognition for our innovative spree,\nRunner-up at the Makerthon, a proud victory for me.\n\nWith a blend of sales, finance, and IT in my hand,\nI march forward with passion across the land.\n\nExcited for the opportunities that come my way,\nIn the world of IT, I thrive and stay.";
+
+var speed = 100;
 
 function typeWriter() {
-  if (i < txt.length) {
+  var lines = txt.split('\n');
+  if (i < lines.length) {
+    var line = lines[i];
     if (i == 0){
-        document.getElementsByClassName("intro-text").item(0).innerHTML="";
+        document.getElementsByClassName("intro-text").item(0).innerHTML="<div></div>";
     }
-    document.getElementsByClassName("intro-text").item(0).innerHTML += txt.charAt(i);
+    document.getElementsByClassName("intro-text").item(0).innerHTML += line + '<br>';
     i++;
     setTimeout(typeWriter, speed);
   }
 }
 
-function openTab(tabId) {
-    // Hide all tabs
-    var tabs = document.querySelectorAll('.tab');
-    tabs.forEach(function(tab) {
-        tab.classList.remove('active');
-    });
 
-    // Show the selected tab
-    var selectedTab = document.getElementById(tabId);
-    if (selectedTab) {
-        selectedTab.classList.add('active');
-    }
-}
 
 document.addEventListener("DOMContentLoaded", function () {
     // Hide the loading screen and show the main content after the video duration
