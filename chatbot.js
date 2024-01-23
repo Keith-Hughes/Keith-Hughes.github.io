@@ -3,7 +3,8 @@ const closeBtn = document.querySelector(".close-btn");
 const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
-
+const projectToggle = document.querySelector(".link");
+let threadID= null;
 let userMessage = null; // Variable to store user's message
 const inputInitHeight = chatInput.scrollHeight;
 
@@ -18,13 +19,21 @@ const createChatLi = (message, className) => {
 }
 
 const generateResponse = (chatElement) => {
-    const API_URL = `https://bbddatabase.azurewebsites.net/ai/${userMessage}`;
-    console.log(API_URL)
+    let API_URL;
+    if (threadID == null) {
+      API_URL = `https://bbddatabase.azurewebsites.net/ai/${userMessage}`;
+    } else {
+      API_URL = `https://bbddatabase.azurewebsites.net/ai/${userMessage}/${threadID}`; // Example default value
+    }
     const messageElement = chatElement.querySelector("p");
     // Send POST request to API, get response and set the reponse as paragraph text
-    fetch(API_URL).then(res => res.text()).then(data => {
-        console.log(data)
-        messageElement.textContent = data;
+    fetch(API_URL).then(res => res.json()).then(data => {
+        if(threadID == null){
+            
+            threadID = data.threadId;
+            
+        }
+        messageElement.textContent = data.response;
     }).catch(() => {
         messageElement.classList.add("error");
         messageElement.textContent = "Oops! Something went wrong. Please try again.";
@@ -70,3 +79,6 @@ chatInput.addEventListener("keydown", (e) => {
 sendChatBtn.addEventListener("click", handleChat);
 closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+projectToggle.addEventListener("click", function(){
+    chatbotToggler.click();
+});

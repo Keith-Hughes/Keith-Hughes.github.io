@@ -34,11 +34,11 @@
       <ul class="chatbox">
         <li class="chat incoming">
           <span class="material-symbols-outlined">KH</span>
-          <p>Hi there 👋<br>Im AI Keith, ask me anything?</p>
+          <p>Hi there 👋<br>Im AI Keith, an AI assistant designed to answer questions about Keith, ask me anything?</p>
         </li>
       </ul>
       <div class="chat-input">
-        <textarea style="" placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
         <span id="send-btn" class="material-symbols-rounded">send</span>
       </div>
     </div>
@@ -65,67 +65,127 @@
                     <li><h3><a href="#">Home</a></h3></li>
                     <li><h3><a href="#about-me" target="_self">About Me</a></h3></li>
                     <li><h3><a href="#skills" target="_self">Skills</a></h3></li>
-                    <li><h3><a href="#">Projects</a></h3></li>
+                    <li><h3><a href="#projects" target="_self">Projects</a></h3></li>
                 </ul>
         </header>
 
         <div class="border" id="about-me"></div>
         
-    
+
         
         <section class="intro">
-            <h2 class="heading-one">&lt;h2&gt;🚀"Code Crafted Rhymes: Keith's Poetic Lines"! 💻&lt;/h2&gt</h2>
+            <h2 class="heading">&lt;h2&gt;🚀"Code Crafted Rhymes: Keith's Poetic Lines"! 💻&lt;/h2&gt</h2>
             <div class="tabs">
-                <div class="tab-button" >$Terminal.
+                <div class="tab-button" ><div class="tab-button-text">$Terminal.
                     <div class="window-symbols" >
                         <i class="fa-solid fa-window-minimize"></i>
                         <i class="fa-solid fa-window-maximize"></i>
                         <i class="fa-solid fa-x"></i>
                     </div>
-                </div>
-                
+                </div>  
             </div>
-            <p class="intro-text2" style="color:rgb(35, 234, 8);" >keith@lh:~/Documents/About Me/$ <p id="skills" class="intro-text" onclick="typeWriter()"><button class="terminal-enable" >The Poetry of Keith's Journey</button></p></p>
+            <p class="intro-text2" style="color:rgb(35, 234, 8);" >keith@lh:~/Documents/About Me/$<span class="cursor" id="typing-cursor">|</span><p class="intro-text" onclick="typeWriter('typing-cursor','intro-text', 'In the world of sales, I began my career,\nBut my passion for IT was always near.\n\nTransitioning to tech, I found my delight,\nGaining expertise and knowledge, shining bright.\n\nAs a mentor, I guided the tech-savvy youth,\nEmpowering them to learn, grow, and sleuth.\n\nWith empathy and patience, I lend an ear,\nFostering a positive tech atmosphere, crystal clear.\n\nAs a freelance web developer, I broke free,\nCreating websites for all to see.\n\nCoding and configuring with skill and grace,\nBuilding online spaces, a valuable embrace.\n\nMy journey in IT is diverse and grand,\nFrom consultancy to accounts, I take my stand.\n\nWith Java and Python, I weave my code,\nSolving problems with skills that I hold.\n\nInnov8 Makerthon sparked a brilliant creation,\nA device to detect cable disruption, a sensation.\n\nEarning recognition for our innovative spree,\nRunner-up at the Makerthon, a proud victory for me.\n\nWith a blend of sales, finance, and IT in my hand,\nI march forward with passion across the land.\n\nExcited for the opportunities that come my way,\nIn the world of IT, I thrive and stay.')">
+                <button class="terminal-enable" >The Poetry of Keith's Journey </button>
+               
+            </p>
+         
+        </p>
+        
+        <div id="skills"></div>
+    </div>
         </section>
         <br >
         <section class="skills">
-            <h2 class="heading-two">&lt;h2&gt;🛠️ Skillset Spotlight 🧠&lt;/h2&gt;</h2>
+            <h2 class="heading" id="skills">&lt;h2&gt;🛠️ Skillset Spotlight 🧠&lt;/h2&gt;</h2>
             <div class="tabs">
-                <div class="tab-button" >$Terminal.
-                    <div class="window-symbols" >
+                <div class="tab-button" ><div class="tab-button-text">$Terminal.
+                    <div class="window-symbols">
                         <i class="fa-solid fa-window-minimize"></i>
                         <i class="fa-solid fa-window-maximize"></i>
                         <i class="fa-solid fa-x"></i>
                     </div>
-                </div>
-                
+                </div>  
             </div>
-            <p class="skils-text2" style="color:rgb(35, 234, 8);" >keith@lh:~/Documents/Skills/$ <p class="skils-text" onclick="typeWriter()"><button class="terminal-enable">Check my skills</button></p></p>
+            <p class="skils-text2" style="color:rgb(35, 234, 8);" >keith@lh:~/Documents/Skills/$<span class="cursor" id="typing-cursor2">|</span> <p class="skils-text" onclick="typeWriter('typing-cursor2','skils-text','Some of my top skills at the moment include:\n- Technical Expertise \n- Empathy and Patience \n- Problem Solving \n- Communication and Interpersonal Skills \n- Java \n- Python (Programming Language) \n- Object-Oriented Programming (OOP) \n- Server side programing\n- System Intergration and APIs\n- WordPress')"><button class="terminal-enable">Check my skills</button></p></p>
+        </div>
+        <div id="projects"></div>
         </section>
-
-        <section class="experience">
-            <h2 class="heading-three">Experience</h2>
-            <h3>Job Title</h3>
-            <p>Company Name - Location | Start Date - End Date</p>
-            <ul>
-                <li>Responsibility/Accomplishment 1</li>
-                <li>Responsibility/Accomplishment 2</li>
-               
-            </ul>
+        <br >
+        <section class="projects">
+            <h2 class="heading">&lt;h2&gt;📂 Project Portfolio 🖥️&lt;</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <h2>Sort Master</h2>
+                        </div>
+                        <div class="card__face card__face--back">
+                            <div class="card__content">
+                                <div class="card__header">
+                                    <h2>SORT MASTER</h2>
+                                </div>
+                                <div class="card__body">
+                                    <p>A simple file sorting application for Linux (Debian Systems).Allows users to organize files by specifying a target directory, a destination folder, and a pattern string. Files in the target directory that match the specified pattern are moved to the destination folder</p>
+                                </div>
+                                <div class="card__footer">
+                                        <a href="https://github.com/Keith-Hughes/SortMaster" target="_blank">
+                                            <i class="fab fa-github" style="color:#273747">
+                                        </i></a>
+                                        <a href="https://stocktally.co.za/sortmaster/" target="_blank">
+                                            <i class="fa-solid fa-globe" style="color: #273747;"></i>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card2">
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <h2>Keith AI</h2>
+                        </div>
+                        <div class="card__face card__face--back">
+                            <div class="card__content">
+                                <div class="card__header">
+                                    <h2>KEITH AI</h2>
+                                </div>
+                                <div class="card__body">
+                                    <p>A Backend API to a custom Ai assistant developed use OpenAi API. This Ai assistant has been trained/prompted to be a digital representation of myself, allowing users to ask the assistant questions about myself. Click the globe to see it in action</p>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="https://github.com/Keith-Hughes/KeithAi_api" target="_blank">
+                                            <i class="fab fa-github" style="color:#273747">
+                                            </i>
+                                    </a>
+                                    <div class="link" target="_blank">
+                                        <i class="fa-solid fa-globe" style="color: #273747;"></i>
+                                    </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card3">
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <h2>BoGuard</h2>
+                        </div>
+                        <div class="card__face card__face--back">
+                            <div class="card__content">
+                                <div class="card__header">
+                                </div>
+                                <div class="card__body">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </section>
-
-        <section class="skills">
-            <h2 class="heading-four">Skills</h2>
-            <ul>
-                <li>Web Development</li>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Responsive Design</li>
-             
-            </ul>
-        </section>
-
+<br>
         <section class="contact-form">
-            <h2 class="heading-five">Get in touch</h2>
+            <h2 class="heading">Get in touch</h2>
             <form id="contactForm">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
