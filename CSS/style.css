@@ -370,7 +370,7 @@ i {
 
 /* Card size dimesions set manually */
 .card, .card2, .card3 {
-  margin: 10px;
+  margin: 10px 20px 10px;
   width: 25vw; /* Adjust as needed */
   max-width: 600px;
   padding-bottom: 0vw; /* Add a max-width to prevent overly large cards on wide screens */
@@ -480,8 +480,9 @@ i {
   flex-direction: row;
 }
 
-.card__footer .fab, .card__footer .fa-solid{
+.card__footer .fab, .card__footer .fa-regular, .card__footer .fa-solid{
   font-size: 250%;
+  margin: 0px 3px 0px;
 }
 
 /* Responsive styles */
@@ -494,10 +495,18 @@ i {
     align-content: center;
     z-index: 0;
   }
+  .card__inner.is-flipped {
+    transform: rotateX(180deg);
+  }
+
+  .card__face--back {
+    transform: rotateX(180deg);
+  }
+
   .card, .card2, .card3 {
     display: flex;
     justify-content:center;
-    margin: 3px 3px 0px;
+    margin: 3px 3px 3px;
     height: 300px;
     width: 300px; /* Adjust as needed */
     /* max-width: 600px; Add a max-width to prevent overly large cards on wide screens */
