@@ -570,4 +570,7 @@ i {
     align-items: center; 
 
   }
+  .fa-brands.fa-java::before{
+    font-size: 250%;
+  }
 }

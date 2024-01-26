@@ -24,7 +24,13 @@ function typeWriter(cursorID, className, txt) {
       function typeCharacter() {
         var line = lines[i];
         if (j < line.length) {
+            if(line[j] == "<"){
+                withoutCursor += line
+                j= line.length -1
+            }
+            else{
             withoutCursor += line[j]
+            }
             document.getElementsByClassName(className).item(0).innerHTML = withoutCursor;
             
             document.getElementsByClassName(className).item(0).innerHTML += "<span class='cursor' id='typing-cursor'>|</span>"
