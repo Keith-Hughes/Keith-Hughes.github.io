@@ -55,6 +55,10 @@ function typeWriter(cursorID, className, txt) {
   typeCharacter();
 }
 
+const skipIntro = document.querySelector(".skip-intro");
+const mainContent = document.querySelector('.main-content');
+
+
 
 
 
@@ -67,7 +71,18 @@ document.addEventListener("DOMContentLoaded", function () {
     var headerHeight = document.querySelector('.my-title').offsetHeight;
     const menuToggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
-  
+    const skipIntro = document.querySelector(".skip-intro");
+
+    skipIntro.addEventListener('click' , function () {                
+        loadingScreen.style.opacity = 0;                // Listen for the 'transitionend' event to hide the loading screen after the fade-out transition
+        loadingScreen.addEventListener('transitionend', function () {
+            loadingScreen.style.display = 'none';
+        });
+    
+        // Set opacity to 1 for fade-in effect
+        mainContent.style.opacity = 1;
+    });
+
     menuToggle.addEventListener('click', function() {
         var headerHeight = document.querySelector('.my-title').offsetHeight;
         menu.style.top = headerHeight + 'px';

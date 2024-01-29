@@ -578,3 +578,25 @@ i {
   color: #015fa7;
   vertical-align: middle;
 }
+.cv{
+  margin-left: 0.15em;
+}
+
+a{
+  align-items: center;
+  text-decoration: none;
+}
+
+.skip-intro {
+  border-radius: 0;
+  background-color:#0000007e;
+  color: white;
+  font-family:inherit;
+  border: 1px solid white;
+  position:absolute;
+  align-self: last baseline;
+  text-align: end;
+  font-weight: 900;
+  margin-bottom: 20px;
+  height: 5%;
+}
