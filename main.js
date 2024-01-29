@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
     const skipIntro = document.querySelector(".skip-intro");
-
     skipIntro.addEventListener('click' , function () {                
         loadingScreen.style.opacity = 0;                // Listen for the 'transitionend' event to hide the loading screen after the fade-out transition
         loadingScreen.addEventListener('transitionend', function () {

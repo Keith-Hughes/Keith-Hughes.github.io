@@ -7,7 +7,7 @@ const projectToggle = document.querySelector(".link");
 let threadID= null;
 let userMessage = null; // Variable to store user's message
 const inputInitHeight = chatInput.scrollHeight;
-
+initializeThread();
 const createChatLi = (message, className) => {
     // Create a chat <li> element with passed message and className
     const chatLi = document.createElement("li");
@@ -18,21 +18,24 @@ const createChatLi = (message, className) => {
     return chatLi; // return chat <li> element
 }
 
-const generateResponse = (chatElement) => {
-    let API_URL;
-    if (threadID == null) {
-      API_URL = `https://bbddatabase.azurewebsites.net/ai/${userMessage}`;
-    } else {
-      API_URL = `https://bbddatabase.azurewebsites.net/ai/${userMessage}/${threadID}`; // Example default value
-    }
-    const messageElement = chatElement.querySelector("p");
-    // Send POST request to API, get response and set the reponse as paragraph text
+function initializeThread(){
+    API_URL = `https://bbddatabase.azurewebsites.net/ai/thread`;
+
     fetch(API_URL).then(res => res.json()).then(data => {
         if(threadID == null){
             
             threadID = data.threadId;
             
         }
+    });
+}
+
+const generateResponse = (chatElement) => {
+    let API_URL
+    API_URL = `https://bbddatabase.azurewebsites.net/ai/${userMessage}/${threadID}`;
+    const messageElement = chatElement.querySelector("p");
+    // Send POST request to API, get response and set the reponse as paragraph text
+    fetch(API_URL).then(res => res.json()).then(data => {
         messageElement.textContent = data.response;
     }).catch(() => {
         messageElement.classList.add("error");

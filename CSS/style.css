@@ -597,6 +597,7 @@ a{
   align-self: last baseline;
   text-align: end;
   font-weight: 900;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   height: 5%;
+  transition: ease-in-out;
 }
