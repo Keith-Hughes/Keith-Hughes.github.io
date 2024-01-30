@@ -42,6 +42,7 @@ import { getFirestore, collection, addDoc } from "https://www.gstatic.com/fireba
             try {
                 const docRef = await addDoc(collection(db, "contacts"), formData);
                 console.log("Document written with ID: ", docRef.id);
+                alert("Form submitted successfully!");
                 event.target.reset();
 
             } catch (e) {
