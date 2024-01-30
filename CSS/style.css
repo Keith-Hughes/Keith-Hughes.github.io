@@ -116,9 +116,10 @@ html {
 }
 
 
-.my-title, .contacts, .skills, .contact-form, .experience {
+.my-title, .contact-form, .awards {
   color: #bbb2cf;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Audiowide", sans-serif;
+  
   margin: 0;
 
 }

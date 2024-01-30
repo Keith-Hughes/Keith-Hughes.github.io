@@ -1,6 +1,8 @@
 var isTyping = false;
 var i = 0;
 var speed = 50
+
+console.log("Please note I'm using a free openAI api for Keith AI. Because of that there are some limitations and some errors are expected:\n1. Limited to 3 requests/messages per minute\n\nIm also hosting this on a free azure subscription so there are some limitations on the hosting server too.\n\nPlease refresh if you run into any errors")
 function typeWriter(cursorID, className, txt) {
   ;
   if (isTyping) {
