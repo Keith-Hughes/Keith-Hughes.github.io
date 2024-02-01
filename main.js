@@ -85,11 +85,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     // Hide the loading screen and show the main content after the video duration
     const loadingScreen = document.querySelector('.loading-screen');
