@@ -1,6 +1,6 @@
-var isTyping = false;
-var i = 0;
-var speed = 50
+let isTyping = false;
+let i = 0;
+let speed = 50
 
 console.log("Please note I'm using a free openAI api for Keith AI. Because of that there are some limitations and some errors are expected:\n1. Limited to 3 requests/messages per minute\n\nIm also hosting this on a free azure subscription so there are some limitations on the hosting server too.\n\nPlease refresh if you run into any errors")
 function typeWriter(cursorID, className, txt) {
@@ -13,8 +13,8 @@ function typeWriter(cursorID, className, txt) {
   document.getElementById(cursorID).classList.toggle("off")
   }
   isTyping = true;
-  var lines = txt.split('\n');
-  var j = 0;
+  let lines = txt.split('\n');
+  let j = 0;
 
   
       // If it's the first line, clear the existing content
@@ -24,7 +24,7 @@ function typeWriter(cursorID, className, txt) {
 
       var withoutCursor=document.getElementsByClassName(className).item(0).innerHTML
       function typeCharacter() {
-        var line = lines[i];
+        let line = lines[i];
         if (j < line.length) {
             if(line[j] == "<"){
                 withoutCursor += line
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const loadingScreen = document.querySelector('.loading-screen');
     const mainContent = document.querySelector('.main-content');
     const loadingVideo = document.getElementById('loading-video');
-    var headerHeight = document.querySelector('.my-title').offsetHeight;
+    let headerHeight = document.querySelector('.my-title').offsetHeight;
     const menuToggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
     const skipIntro = document.querySelector(".skip-intro");
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     menuToggle.addEventListener('click', function() {
-        var headerHeight = document.querySelector('.my-title').offsetHeight;
+        let headerHeight = document.querySelector('.my-title').offsetHeight;
         menu.style.top = headerHeight + 'px';
       menu.classList.toggle('show');
       
