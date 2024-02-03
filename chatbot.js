@@ -32,9 +32,10 @@ function initializeThread(){
 
 const generateResponse = (chatElement) => {
     let API_URL
+    
     API_URL = `https://bbddatabase.azurewebsites.net/ai/${userMessage}/${threadID}`;
     const messageElement = chatElement.querySelector("p");
-    // Send POST request to API, get response and set the reponse as paragraph text
+    // Send GET request to API, get response and set the reponse as paragraph text
     fetch(API_URL).then(res => res.json()).then(data => {
         messageElement.textContent = data.response;
     }).catch(() => {
@@ -44,7 +45,7 @@ const generateResponse = (chatElement) => {
 }
 
 const handleChat = () => {
-    userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
+    userMessage = chatInput.value.trim().replace("?", ""); // Get user entered message and remove extra whitespace
     if(!userMessage) return;
 
     // Clear the input textarea and set its height to default
