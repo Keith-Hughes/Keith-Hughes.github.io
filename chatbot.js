@@ -18,12 +18,12 @@ const createChatLi = (message, className) => {
     return chatLi; // return chat <li> element
 }
 
-function initializeThread(){
+async function  initializeThread(){
     API_URL = `https://bbddatabase.azurewebsites.net/ai/thread`;
 
-    fetch(API_URL).then(res => res.json()).then(data => {
+    await fetch(API_URL).then(res => res.json()).then(data => {
+        console.log(data);
         if(threadID == null){
-            
             threadID = data.threadId;
             
         }
